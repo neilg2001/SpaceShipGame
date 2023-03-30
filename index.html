@@ -1,0 +1,174 @@
+<html>
+
+<title>Asteroids</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- HTML -->
+<body>
+  <div class='outer-container'>
+      <div class='game-window'>
+        
+        <!-- -------------------------------------------- -->
+        <!-- --------------- MAIN MENU ------------------ -->
+        <!-- -------------------------------------------- -->
+
+        <div class= "menu_border" id="main_menu">
+          <div class= "menu_header">
+            <img src = "./src/asteroid.png">
+            Asteroids
+            <img src = "./src/asteroid.png">
+          </div>
+          <div class = "button_layout">
+            <div class= "menu_button">
+              <button onclick="check_tut()" class = "menu_button">Play game!</button>
+            </div>
+            <div class= "menu_button">
+              <button onclick ="setting_click()" class = "menu_button">Settings</button> 
+            </div>     
+          </div>     
+        </div>  
+        
+        
+        <!-- -------------------------------------------- -->
+        <!-- --------------- SETTINGS ------------------  -->
+        <!-- -------------------------------------------- -->        
+        <div class = "settings" id = "settings">
+          <div class = "settings_header">Settings</div>
+          <div class="slide_container">
+            <p class = slide_text>Volume: <span id="demo"></span></p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+
+          <div class = "difficulty_header">Difficulty</div>
+          <div class = "dbuttons_layout">
+              <button class = "dbutton" input id="butt1">Easy</button>
+              <button class = "dbutton" input id="butt2">Normal</button>
+              <button class = "dbutton" input id="butt3">Difficult</button>
+          </div>>
+
+          <div class = "close">
+            <button onclick = "setting_close()" class = "dbutton">Close</button>
+          </div>>
+        </div>  
+        
+        <!-- -------------------------------------------- -->
+        <!-- --------------- TUTORIAL ------------------  -->
+        <!-- -------------------------------------------- -->        
+        <div class = "tutorial_layout" id = "tutorial">
+          <div class = "tutorial_element">
+            <p><strong>How to play</strong></p>
+          </div>
+          <div class = "tutorial_element">
+          <p><strong>Avoid</strong> <em>asteroids!</em></p>
+          </div>
+
+          <div class = "tutorial_element">
+            <img src = "./src/asteroid.png" class = asteriod>
+          </div>
+
+          <div class = "tutorial_element">
+            <p><strong>Collect</strong> <em>shields!</em> <strong>Travel</strong> through <em>portals</em> to the next level</p>
+          </div>
+
+          <div class = "tutorial_element">
+            <div class = "horizontal">
+              <img src = "./src/shield.gif" class = asteriod>
+              <img src = "./src/port.gif" class = asteriod>
+            </div>          
+          </div>
+
+          <div class = "tutorial_element">
+            <p><strong>Gain</strong> as many <em>points</em> as possible!</p>
+          </div>
+
+          <div class = "tutorial_element">
+            <button onclick ="ready_click()" class = "start_button">Start</button> 
+          </div>
+        </div>
+
+        <!-- -------------------------------------------- -->
+        <!-- --------------- THE GAME ------------------  -->
+        <!-- -------------------------------------------- -->
+        <div id = "game">
+
+          <div id="game_right_section">
+            <div id="scoreword">
+              SCORE
+            <div id="score_num"></div>
+          </div>
+          <div id="danger">DANGER
+          <div id="danger_num"></div></div>
+          <div id="level">LEVEL
+          <div id="level_num"></div></div>
+          </div>
+
+          <div id="get_ready">
+            <div class="getready" id = "ready">
+              <p>Get Ready!</p>
+              <img src = "./src/arrowkeys.png">
+              <p style="font-size: 50px">Use arrow keys to move.</p>
+            </div>
+
+          </div>
+
+          <!-- Actual Game -->
+          <div id="actual_game">
+            <div class="rocket" id = "rocket_id">
+              <img src = "./src/player/player.gif" id = "rocket_img">
+            </div>
+
+            <div class="asteroidSection">
+                <div class="curAstroid"> </div>
+            </div>
+
+            <div class="shield" id = "shield">
+              <img src = "./src/shield.gif" id = "shield_img">
+            </div>
+
+            <div class="portal" id = "portal">
+              <img src = "./src/port.gif" id = "portal_img">
+            </div>
+
+
+          </div>  
+        </div> 
+
+      <!-- -------------------------------------------- -->
+      <!-- --------------- GAME OVER ------------------ -->
+      <!-- -------------------------------------------- -->
+      <div class = "over" id = "game_over">
+        <div class= "menu_header">
+          <img src = "./src/asteroid.png">
+          Asteroids
+          <img src = "./src/asteroid.png">
+        </div>
+
+
+
+        <div class = "box">
+          <p>GAME OVER!</p>
+          <p>YOU HAVE TO FIX YOUR SPACESHIP!</p>
+          <div id="final_score"></div>
+          <div class = "close">
+            <button onclick = "start_over()">Start Over</button>
+          </div>
+        </div>
+      </div> 
+
+
+
+
+
+
+
+    </div> <!-- end game-window -->
+  </div> <!-- end outer-container -->
+</body>
+</html>

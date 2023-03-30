@@ -1,0 +1,301 @@
+/* Main Containers */
+body, button {
+  font-family: VT323;
+}
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+}
+  
+/* Game Section --- Right Section */
+
+#actual_game{
+    height: 720px;
+    width: 1280px;
+    background-color: white;
+    z-index: 10;
+    right: 0px;
+    top: 0px;
+
+}
+
+#game_right_section {
+    height: 600px;
+    width: 320px;
+    position: absolute;
+    left: 960px;
+    top: 0px;
+    color: black;
+    z-index: 1;
+}
+
+#scoreword, #danger, #level {
+  text-align:center;
+  font-size: 60px;
+}
+
+#score_num, #danger_num, #level_num {
+  text-align: center;
+  font-size: 40px;
+  color: darkblue;
+}
+
+#player {
+  position: absolute;
+  width: 62px;
+  left: 600px;
+  top: 300px;
+  z-index: 9;
+}
+
+.curAstroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAstroid img{
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#main_menu{
+  background-image: url("/src/frontpage_background.jpg");
+  text-align: center;
+  height: 720px;
+}
+
+#menu_border {
+  margin-top: 100px;
+}
+
+.menu_header{
+  width: 100%;
+  height: 100px;
+  background-color: darkslateblue;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  font-size: 100px; 
+  color: white;
+  display: flex;
+  justify-content: space-between;  
+}
+
+.menu_header img{
+  height: 100%;
+}
+
+#settings{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  border: white 1px solid;
+  height: 690px; 
+  width: 600px;
+  background-color: darkslateblue;
+  vertical-align: center;
+}
+
+
+.menu_button{
+  width: 200px;
+  height: 100px;
+  background-color: darkslateblue;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white; 
+}
+
+.button_layout{
+  display: inline-block;
+  line-height: normal;  
+  vertical-align: middle;
+  margin-top: 60px;
+}
+
+.settings_header{
+  color: white; 
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.slide_container{
+  text-align: center;
+  margin-top: 50px;;
+}
+
+.slider {
+  width: 75%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide_text{
+  color: white; 
+  font-size: 30px; 
+  font-weight: bold;
+}
+
+.difficulty_header{
+  color: white; 
+  font-size: 30px; 
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dbuttons_layout{
+  display: flex;
+  justify-content: space-evenly;  
+  margin-top: 30px;
+
+}
+
+.dbutton{
+  width: 180px;
+  height: 100px;
+  background-color: purple;
+  /* border-color: yellow; */
+  font-size: 40px;
+  color: white;  
+  border-color: black;
+}
+
+.highlight{
+  border: yellow 2px solid
+}
+
+.close{
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tutorial_layout{
+  text-align: center;
+  vertical-align: middle;
+  height: 720px;
+  width: 1280px;
+}
+
+.tutorial_element{
+  display: flex;
+  justify-content: center;  
+  font-size: 30px;
+}
+
+.asteriod{
+  width: 100px; 
+  height: 100px;
+}
+
+.horizontal{
+  display: inline-block;
+}
+
+.start_button{
+  width: 200px; 
+  height: 75px; 
+}
+
+.getready{
+  text-align: center;
+  font-size: 75;
+}
+
+.rocket{
+  text-align: center;
+  top: 60px; 
+  left: 590px; 
+  position: relative; 
+  display: inline-block;
+  /* transform: translate(20%, 250%); */
+}
+
+.rocket img {
+  height: 100px;
+  width: 100px;
+}
+
+
+/* #over{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 200px; 
+  width: 600px;
+  background-color: darkslateblue;
+  vertical-align: center;
+} */
+
+.over{
+  background-image: url("/src/frontpage_background.jpg");
+  text-align: center;
+  height: 720px;
+}
+
+.box{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  height: 220px; 
+  width: 520px;
+  background-color: darkslateblue;
+  vertical-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.shield{
+  position: absolute;
+  left: 0px; 
+  top: 0px; 
+
+}
+
+.shield img{
+  height: 100px; 
+  width: 100px; 
+}
+
+.portal{
+  position: absolute;
+  left: 0px; 
+  top: 0px; 
+
+}
+
+.portal img{
+  height: 100px; 
+  width: 100px; 
+}
